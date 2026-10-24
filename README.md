@@ -25,11 +25,23 @@
 
 ## Utilisation
 
-1. Téléchargez l’archive de l’outil et extrayez-la sur votre PC Windows.
+1. Téléchargez ce dépôt avec **Code → Download ZIP**, puis extrayez l’archive sur votre PC Windows.
 2. Conservez une copie des fichiers originaux avant toute opération.
-3. Lancez l’utilitaire et choisissez l’action adaptée au format à traiter : déchiffrement, chiffrement ou reconstruction.
+3. Lancez `rebuilder.exe` depuis le dossier extrait et choisissez l’action adaptée au format à traiter : déchiffrement, chiffrement ou reconstruction.
 4. Sélectionnez les fichiers et renseignez les paramètres demandés en suivant les instructions fournies.
 5. Vérifiez les fichiers générés avant de remplacer ceux de votre projet.
+
+## Contenu du dépôt
+
+Le dépôt contient la distribution binaire Windows de la version 1.65 :
+
+- `rebuilder.exe` : programme principal.
+- `tool/` : les 12 outils, bibliothèques et fichiers auxiliaires fournis avec le programme, dont `core.jar`, `core.cfg` et `dev_klics.txt`.
+- `data/` : les fichiers `keys`, `ldr_curves` et `vsh_curves` nécessaires aux outils.
+- `history.txt` : historique des versions fourni avec le programme.
+- `edat/`, `raps/`, `sdat/` et `temp/` : dossiers de travail conservés avec des fichiers `.gitkeep`.
+
+Conservez cette arborescence complète à côté de `rebuilder.exe`. Le moteur `tool/core.jar` utilise Java (JRE) ; sa mémoire JVM est configurée dans `tool/core.cfg`. Git ignore le contenu ajouté dans les quatre dossiers de travail ainsi que les rapports de plantage `*.stackdump`. Les sources du logiciel ne sont pas incluses dans cette distribution.
 
 ## Important
 
